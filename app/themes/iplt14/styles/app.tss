@@ -1,0 +1,22 @@
+"#navBar":{
+  left: 0,
+  top: 0,
+  height: "48dip", //navBar height is set dynamically based on os version in js.
+  layout: "absolute"
+},
+"#navBarContent":{
+  left: 0,
+  bottom: 0,
+  height: "48dip",
+  layout: "absolute"
+},
+"#content": {
+  left: 0,
+  top: 0, // content height is set dynamically based on os version in js.
+  height: Ti.UI.FILL
+},
+".standingsFont": {
+  font: {
+    fontSize: 16
+  }
+}

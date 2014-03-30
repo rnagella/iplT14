@@ -1,0 +1,39 @@
+<Alloy>
+	<Window backgroundColor="white" layout="composite">
+		<View layout="absolute" id="navBar">
+      <View id="navBarContent">
+        <Label> STANDINGS</Label>
+      </View>
+		</View>
+    <View id="content" layout="vertical">
+      <ListView id="listView" height="Ti.UI.FILL"
+        separatorColor="black" right="5" left="0" defaultItemTemplate="listingTemplate">
+        <HeaderView layout="horizontal">
+          <View height="Ti.UI.SIZE" layout="horizontal">
+            <Label text="T" width="44" textAlign="Ti.UI. TEXT_ALIGNMENT_CENTER"/>
+            <Label text="P" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            <Label text="W" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            <Label text="L" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            <Label text="NR" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            <Label text="P" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            <Label text="NRR" left="10" width="Ti.UI.FILL" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+          </View>
+        </HeaderView>
+        <Templates>
+          <ItemTemplate name="listingTemplate">
+            <View layout="horizontal" height="Ti.UI.SIZE">
+              <ImageView bindId="logoView" height="44" width="44" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="played" width="30" left="10" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="win" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="lost" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="noResult" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="points" left="10" width="30" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+              <Label bindId="netRunRate" left="10" width="Ti.UI.FILL" class="standingsFont" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+            </View>
+          </ItemTemplate>
+        </Templates>
+        <ListSection id="listSection"></ListSection>
+      </ListView>
+    </View>
+  </Window>
+</Alloy>
